@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automatico</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <main class="container"> 
+        <div class="pantalla">
+            <div id="bontones1">
+                <button type="button" class="btn" id="btn_ingreso">    
+                    Ingresar Dinero
+                </button>
+                <button type="button" class="btn" id="btn_retiro">    
+                    Retirar Dinero
+                </button>
+            </div>
+            <div id="mensaje">
+
+            </div>
+
+            <div id="bontones2">
+                <button type="button" class="btn" id="btn_transfer">    
+                    Transferir Dinero
+                </button>
+                <button type="button" class="btn" id="btn_consulta">    
+                    Consultar Saldo
+                </button>
+            </div>
+            
+        </div>
+    
+    <!-- Ventana modal, por defecto no visiblel -->
+   <!--Modal Bienvenida , por defecto no visiblel -->
+   <div id="bienvenidaModal" class="modal">
+    <!-- <div class="modal-dialog" role="document"> -->
+        <div class="contenido-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="title-modal">
+                    Bienvenidos a Su Banco Amigo
+                </h5>     
+                <h4 class="modal-title" id="title-modal">
+                    Registre su cuenta y su Clave por favor
+                </h4>  
+                
+            </div>                    
+            <div id="modal-body">
+                <form action="" method="post">
+                    <div class="row">
+                        <label for="cuenta1">Cuenta </label>
+                        <input type="text" name="cuenta1" id="cuenta1" placeholder="Digite su cuenta">
+                     </div>
+                    <div class="row" id="div-clave">
+                        <label for="clave">Clave</label>
+                        <input type="password" name="clave" id="clave" placeholder="Digite la clave">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btnaceptar " id="btn_aceptar" name="btn_aceptar">
+                    Aceptar
+                </button>
+                <button type="button" class="btncerrar" data-dismiss="modal" id="btn_cancelar">Cancelar</button>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+
+    <div id="ventanaModal" class="modal">
+        <!-- <div class="modal-dialog" role="document"> -->
+            <div class="contenido-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="title-modal">
+                        modal
+                    </h5>      
+                    <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                
+                <div id="modal-body">
+                    <form action="" method="post">
+                        <div class="row">
+                            <label for="monto">Ingrese el Monto</label>
+                            <input type="text" name="monto" id="monto" placeholder="Digite el Monto">
+                         </div>
+                        <div class="row" id="div-cuenta">
+                            <label for="monto">Cuenta a Transferir</label>
+                            <input type="text" name="cuenta" id="cuenta" placeholder="Digite la Cuenta">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btnenviar " id="btn_enviar" name="btn_enviar">
+                        Enviar
+                    </button>
+                    <button type="button" class="btncerrar" data-dismiss="modal" id="btn_cancelar">Cerrar</button>
+                </div>
+            </div>
+        <!-- </div> -->
+    </div>
+    </main>
+    <script src="funciones.js"></script>
+</body>
+</html>

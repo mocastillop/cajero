@@ -1,0 +1,118 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("background1.png");   
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bontones1{
+    padding-top: 230px;     
+    display: flex;
+    justify-content:space-between ;
+}
+
+#bontones2{
+    padding-top: 150px;     
+    display: flex;
+    justify-content:space-between ;
+}
+.btn{
+    background-color: #0140fe; 
+    border-radius: 5px;
+    border:none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;    
+    font-size: 16px;
+    cursor: pointer;    
+}
+.btn{
+    transition-duration: 0.4s;
+}
+
+label{
+    margin-right: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.row{
+    margin-block-start: 1rem;
+}
+
+.btn:hover{
+    background-color: white; /* Green */
+    border: solid 2px;
+    border-color: #0140fe;
+    color: #0140fe;
+}
+.pantalla{
+    margin-block-start: 60px;
+    /* border: solid 5px; */
+    width: 650px;
+    height: 550px;    
+}
+.modal{
+    display: none; /* Por defecto, estará oculto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 250px; /* El contenido estará situado a 200px de la parte superior */
+    left: 2;
+    top: 0;
+    cursor: pointer;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Algura completa */
+    overflow: auto; /* Se activará el scroll si es necesario */
+    background-color: rgba(0,0,0,0.6); /* Color negro con opacidad del 50% */
+}
+.contenido-modal {
+    position: relative; /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto; /* Centrada */
+    padding: 30px;    
+    border-radius: 8px;
+    width: 40%;
+    max-height: 80vh;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s    
+}
+
+.modal-footer{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 1rem;
+    background-color:rgba(0,0,0,0.093);
+    
+    height: 2rem;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--lightgray);
+}
+  
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animarsuperior {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
